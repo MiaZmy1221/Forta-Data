@@ -1,0 +1,30 @@
+[package]
+name = "libsofl-core"
+version.workspace = true
+authors.workspace = true
+description = "Core EVM execution engine."
+homepage.workspace = true
+rust-version.workspace = true
+license.workspace = true
+edition.workspace = true
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+
+# revm
+revm.workspace = true
+alloy-primitives.workspace = true
+revm-primitives.workspace = true
+
+auto_impl.workspace = true
+derive_more.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+lazy_static.workspace = true
+
+thiserror = "1.0.40"
+hex = { version = "0.4", default-features = false, features = ["alloc"] }
+
+# test dependencies
+mockall.workspace = true

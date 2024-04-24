@@ -1,0 +1,5 @@
+[reth]
+datadir = "/path/to/blockchain"
+
+[jsonrpc]
+url = "http://localhost:8545"

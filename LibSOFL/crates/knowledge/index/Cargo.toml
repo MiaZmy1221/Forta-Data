@@ -1,0 +1,57 @@
+[package]
+name = "libsofl-knowledge-index"
+version.workspace = true
+authors.workspace = true
+description = "Historical transaction mining"
+homepage.workspace = true
+rust-version.workspace = true
+license.workspace = true
+edition.workspace = true
+
+[lib]
+path = "src/lib.rs"
+
+[[bin]]
+name = "migration"
+path = "bin/migration/main.rs"
+
+[[bin]]
+name = "collect"
+path = "bin/collect/main.rs"
+
+[features]
+default = []
+test-using-jsonrpc = []
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+libsofl-core.workspace = true
+libsofl-reth.workspace = true
+libsofl-jsonrpc.workspace = true
+libsofl-utils.workspace = true
+libsofl-knowledge-base.workspace = true
+
+clap = { version = "4.4.12", features = ["derive"] }
+indicatif = "0.17"
+tracing-indicatif = "0.3"
+tracing-subscriber.workspace = true
+signal-hook = "0.3.17"
+signal-hook-tokio = { version = "0.3.1", features = ["futures-v0_3"] }
+log = "0.4"
+
+tokio.workspace = true
+tokio-util.workspace = true
+futures.workspace = true
+sea-orm.workspace = true
+sea-orm-migration.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+
+alloy-sol-types.workspace = true
+alloy-sol-macro.workspace = true
+alloy-dyn-abi.workspace = true
+alloy-json-abi.workspace = true
+
+# mia: add revm
+revm.workspace = true
