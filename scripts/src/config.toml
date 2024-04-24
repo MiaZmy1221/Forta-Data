@@ -1,0 +1,5 @@
+[reth]
+datadir = "/mnt/nvme/mengya/reth-node/reth-data/"
+
+[jsonrpc]
+url = "http://localhost:8545"
